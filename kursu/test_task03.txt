@@ -1,0 +1,25 @@
+stratprogram
+data int_2 a01, _b02, _c01, _c02, _x01;
+startblock
+
+get(_a01);
+get(_b02);
+
+	_a01 :> _c01;
+	while _c01 less _b02 {
+		put( _c01 * _c01 );
+		_c01 + 1 :> _c01;
+    }
+
+    0 :> _x01;
+	1 :> _c01;
+	while _c01 less _a01 {
+		1 :> _c02;
+		while _c02 less _b02 {
+			_x01 + 1 :> _x01;
+			_c02 + 1 :> _c02;
+		}
+		_c01 + 1 :> _c01;	
+	}
+	put (_x01);
+endblock

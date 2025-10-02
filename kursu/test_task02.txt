@@ -1,0 +1,36 @@
+stratprogram
+data int_2 a01, _b02, _c01, _m01;
+startblock
+
+get(_a01);
+get(_b01);  
+get(_c01);
+
+if _a01 gr _b02 and _a01 gr _c01 {
+		_a01 :> _m01;
+	} else If _b02 gr _a01 and _b02 Ge _c01 {
+		_b02 :> _m01;
+	} else {
+		_c01 :> _m01;
+	}
+	put (_m01);
+
+    if (_a01 eq _b02) and (_a01 eq _c01) and (_b02 eq _c01) {
+		put (1);
+	} else {
+		put (0);
+	}
+
+    if ! (_a01 gr 0) || ! (_b02 gr 0) || !(_c01 gr 0) {
+		put(-1);
+	} else {
+		put(0);
+	}
+
+    if (_a01 gr (_b02 + _c01) ) {
+		put(10);
+	} else {
+		get(0);
+	}
+
+    endblock

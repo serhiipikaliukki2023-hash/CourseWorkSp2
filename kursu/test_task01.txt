@@ -1,0 +1,21 @@
+stratprogram
+data int_2 a01, _b02, _x01, _y01;
+startblock
+
+get(_a01);
+get(_b01);
+
+put(_a01 + _b02);
+put(_a01 - _b02);
+put(_a01 * _b02);
+put(_a01 / _b02);
+put(_a01 % _b02);
+
+(_a01 -_b02) * 10 + (_a01 + _b02) / 10 :> _x01;
+_a01 + (_a01 % 10) :> _y01;
+
+
+put(_x01);
+put(_y01);
+
+endblock
